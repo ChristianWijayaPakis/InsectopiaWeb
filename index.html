@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Ini dasar template bootstraps -->
+    <title>Insectopia</title>
+
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ini buat ngehubungin dengan file bootstrap css nya -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- ini buat ngehubungin ke style.css -->
+   <script src="assets/js/jquery-1.11.0.min.js"></script>
+   <!-- ini buat ngehubungin ke jquery -->
+   <script src="assets/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+<script>
+	$(document).ready(function(){
+		$("body").hide(300).show(5000);
+// });ini buat bikin animation masuk di awal2
+
+    $(document).ready(function(){
+      $('a[href*=#]').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        && location.hostname == this.hostname) {
+          var $target = $(this.hash);
+          $target = $target.length && $target
+          || $('[name=' + this.hash.slice(1) +']');
+          if ($target.length) {
+            var targetOffset = $target.offset().top;
+            $('html,body')
+            .animate({scrollTop: targetOffset}, 1000);
+           return false;
+          }
+        }
+      });
+    // });ini buat scrolling down nya smooth pas kita one page website
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#my-navbar">
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar" style="background-color: green;">
+  <div class="container-fluid">
+  <!-- ini buat navbar -->
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="logo" href="#">
+      	 <img alt="Brand" src="assets/img/insect.jpg" width="40,5px" height="40,5px"><!-- ini logo di navbar -->
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class=""><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Project</a></li>
+        <li class="dropdown">
+         
+          <ul class="dropdown-menu">
+            <li><a href="#">Go to google</a></li>
+            <li><a href="#">My personal contact</a></li>
+            <li><a href="#">My line account</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      	<form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search here">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+        <li><a href="#contact">About Me</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!-- semua navbar di bagian atas website -->
+
+<div class="container-fluid" id="container">
+  <div class="jumbotron text-center">
+  <h1>Insectopia</h1>
+  
+   <div id="myCarousel" class="carousel slide " data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner text-center" id="img">
+    <div class="item active">
+      <img src="assets/img/semut2.jpg" alt="Semut">
+      <div class="carousel-caption overlay">
+          <h3>Semut</h3>
+          
+        </div>
+    </div>
+
+    <div class="item" id="img">
+      <img src="assets/img/kecoa2.jpg" alt="Kecoa">
+      <div class="carousel-caption overlay">
+          <h3>Kecoa</h3>
+          
+        </div>
+    </div>
+
+    <div class="item" id="img">
+      <img src="assets/img/belalang2.jpg" alt="Belalang">
+      <div class="carousel-caption overlay">
+          <h3>Belalang</h3>
+          
+        </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="row"><!-- ini baris untuk masing masing majalah website yang di masukin -->
+  <div class="col-md-4"><!-- masing-masing topik dapet 4 grid jadi totalnya 12 -->
+    <div class="thumbnail">
+      <img src="assets/img/orangtidur.jpg" alt="orangtidur" class="img-circle" width="252px" height="150px">
+      <div class="caption">
+        <h3>9 Cara membuat tidur anda berkualitas</h3>
+        <p></p>
+        <p><a href="#berkualitas" class="btn btn-primary" role="button">View Details</a><!-- href nya dimasukin ke button di masing-masing topik --> 
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <img src="assets/img/program.jpg" alt="program" class="img-circle"  width="300px" height="300px">
+      <div class="caption">
+        <h3>5 Tips belajar cepat menjadi programmer</h3>
+        <p></p>
+        <p><a href="#program" class="btn btn-primary" role="button">View Details</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <img src="assets/img/senang.jpg" alt="..." class="img-circle"  width="300px" height="300px">
+      <div class="caption">
+        <h3>4 Cara agar hidup lebih tenang dan senang</h3>
+        <p></p>
+        <p><a href="#senang" class="btn btn-primary" role="button">View Details</a> 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <div class="container">
+  	<section>
+  		<div class="page-header" id="contact"><!-- ini div untuk contact -->
+		<h2>Contact me<small> for more information.</small></h2>
+	</div>
+		<div class="row">
+			<div class="col-md-4">
+				<p>Send me a message, or contact me from the addres below</p>
+				<address>
+					<strong>Christian Wijaya</strong><br><!-- strong biar kaya ke block -->
+					Pademangan Timur<br>
+					Pademangan 3 gang 20<br>
+					Jakarta Utara, Indonesia.<br>
+					huangchristian98@yahoo.com<br>
+					+6287874148534
+				</address>
+			</div>
+			<div class="col-md-8"><!-- ini gridnya 8 -->
+				<form action="" class="form-horizontal">
+					<div class="form-group">
+						<label for="user-name" class="col-md-2 control-label">Name	
+						</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" id="user-name" placeholder="Enter your name">
+						</div>
+					</div>
+          <!-- tapi kenapa di dalem grid 8 bisa ada 2 sama 10, itu karena di dalem grid 8 itu sebenernya ada 12 grid lagi tapi bukan grid yang udah ada di web, tetapi grid yang ada di grid 8. -->
+					<div class="form-group">
+						<label for="user-name" class="col-md-2 control-label">Email	
+						</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" id="user-email" placeholder="Enter your email">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="user-name" class="col-md-2 control-label">Message me
+						</label>
+						<div class="col-md-10">
+						<textarea name="user-message" id="user-message" class="form-control" cols="20" rows="10" placeholder="Enter your message"></textarea>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-md-10 col-md-offset-2"><!-- grid offset itu supaya gridnya dimulai setelah 2 grid di lewatin :D -->
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+						
+					</div>
+				</form>
+			</div>
+		</div>
+
+  	</section>
+  	
+  </div>
+<div class="container">
+	<section>
+	<div class="page-header" id="faq"><!-- ini buat questin and answer -->
+		<h2>FAQ.<small>Answering your question</small></h2>
+	</div>
+	<div class="panel-group" id="accordion"><!-- panel group itu supaya jadi group yang sama dah ada panelnya -->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title"><!-- yang ini buat judul pertanyaannya -->
+					<a href="#collapse-1" data-toggle="collapse" data-parent="#accordion">Who i am?</a>
+				</div>
+				<div id="collapse-1" class="panel-collapse">
+					<div class="panel-body">
+						Saya Christian WIjaya, Mahasiswa Binusian, aktifis BNCC.
+						<br>
+						Muda, single dan bersemangat XD.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<a href="#collapse-2" data-toggle="collapse" data-parent="#accordion">Ini apaan?</a>
+				</div>
+				<div id="collapse-2" class="panel-collapse "><!-- ini buat panelnya menurun harusnya cman gagal -->
+					<div class="panel-body">
+						Project pertama yang diberikan oleh senior BNCC
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<a href="#collapse-3" data-toggle="collapse" data-parent="#accordion">Untuk apa?</a>
+				</div>
+				<div id="collapse-3" class="panel-collapse">
+					<div class="panel-body">
+						Hmmmm..??? Seneng-seneng XD.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+</div>
+
+<section>
+	<div class="well "><!-- ini buat supaya kaya backgroundnya berwarna -->
+
+		<div class="container text-center"><!-- text center itu supaya textnya ke tengah tengah container atau di tengah tengah semua grid -->
+			<h3>Follow me on Sosmed for more</h3>
+			<p>Enter your name and email</p>
+			<form action="" class="form-inline">
+				<div class="form-group">
+					<label for="Subcription">Name</label>
+					<input type="text" class="form-control" id="follow" placeholder="Your name">
+					</div>
+					<div class="form-group">
+						<label for=email>Email address</label>
+						<input type="text" class="form control" id="followemail" placeholder="Enter your Email">
+						</div>
+				<button type="submit" class="btn btn-primary">Follow</button>
+			</form>
+		</div>
+	</div>
+</section>
+<div class="text-center">
+<hr>
+<ul class="list-inline">
+	<li><a href="https://www.facebook.com/Christian.Wijaya.24.12.97"><strong>Facebook</strong></a></li>
+	<li><a href="https://www.youtube.com/channel/UCvwXb8pWqzTe6bKD-auqpEw"><strong>Youtube</strong></a></li>	<!-- ini sosmed yang udah di link dan berhasil -->
+</ul>
+</div>
+<div class="text-center">
+<p>&copy:Copyright @ 2016</p><!-- ini cuman template copyright biasa -->
+</div>
+	<footer>
+        <p>© 2016 Pakis, Inc.</p>
+      </footer><!-- ini cman footer perusahaan :D -->
+  </body>
+</html>
